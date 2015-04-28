@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Base styles for standalone (non-module) tags, text, and backgrounds
+   ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700|Comfortaa|Architects+Daughter);
+
+html{
+	min-height: 100%;
+}
+
+body{
+	min-height: 100%;
+	margin: 0;
+	background-color: #150020; /* fallback */
+	background-image: linear-gradient(#030010 50%, #200025 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	color: #ccc; /* fallback */
+	color: rgba(255,255,255,.7);
+}
+
+.hidden {
+	display: none;
+}

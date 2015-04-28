@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Base styles for everything displayed within the focused-element overlay
+   ========================================================================== */
+
+
+.element-overlay {
+	display: none;
+	box-sizing: border-box;
+	background: rgba(25,25,25,1);
+	padding: 1em;
+	border-radius: 5px;
+	border: 10px solid rgba(120,100,150,.5);
+	border: linear-gradient(#030010 50%,#200025 100%);
+	box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+	width: 38.25em;
+	font-size: 1rem;
+	.dismiss {
+
+	}
+	h2 {
+		box-sizing: inherit;
+		position: relative;
+		margin: 0;
+		padding: .25em;
+		width: 100%;
+		background: #111;
+		font-variant: small-caps;
+		font-size: 3em;
+		color: #333;
+		text-shadow: -1px -1px 1px #000;
+	}
+	.element-quick-detail {
+		box-sizing: inherit;
+		background: #0a0a0a;
+		margin-bottom: 1em;
+		padding: .5em;
+		color: #3ab;
+		& * {
+			display: inline;
+			margin: 0 .5em;
+		}
+	}
+}

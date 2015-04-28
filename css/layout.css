@@ -1,0 +1,8 @@
+/* ==========================================================================
+   Base styles for large sections which hold modules (header, footer, etc.)
+   ========================================================================== */
+#header {
+  margin: auto;
+  margin-top: 0;
+  padding: 1rem;
+  margin-bottom: 2rem; }

@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Styles specific to index.php
+   ========================================================================== */
+
+#header {
+	background: linear-gradient(rgba(255,255,255,.05) 0%, rgba(255,255,255,.05) 100%);
+}
+#title{
+	font-size: 4rem;
+	font-weight: 300;
+	padding: 0;
+	margin: 0;
+	margin-top: -1rem;
+}
+#tagline{
+	margin: -1rem 0 0 2.5rem; 
+	font-size: 1.5rem;
+	font-family: 'Architects Daughter', cursive;
+	color: #3ab;
+}

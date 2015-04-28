@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Base styles pertaining to the periodic table
+   ========================================================================== */
+
+.ptable{
+	margin: auto 2em auto 2em;
+	margin-bottom: 4em;
+}
+
+.period{
+	/*display: flex;*/
+	min-height: 3em;
+}
+
+.block-ptable{
+	display: inline-block;
+	min-width: 3em;
+	min-height: 3em;
+	width: 5vw;
+	/*flex-grow: 1;*/
+	background: rgba(255,255,255,.2);
+	border-radius: 2px;
+	margin: 1px;
+	text-align: center;
+}
+
+.element-ptable:hover{
+	/*it's normal styles come from block-ptable*/
+	background: rgba(255,255,255,.6);
+	color: #835;
+	cursor: pointer;
+}
+
+.key1-ptable{
+	color: #33aaee;
+	background-color: rgba(255,255,255,.1);
+}
+.key2-ptable{
+	color: #ff778f;
+	background-color: rgba(255,255,255,.1);
+}
+
+.atomic_num-ptable{
+	margin-top: .25rem;
+	font-size: .8rem;
+}
+
+.symbol-ptable{
+	margin: .25rem;
+	font-family: 'Comfortaa', cursive;
+	font-size: 1.5rem;
+}
+
+.empty{
+	visibility: hidden;
+}
