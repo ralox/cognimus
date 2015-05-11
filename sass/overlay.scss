@@ -5,39 +5,74 @@
 
 .element-overlay {
 	display: none;
+	position: absolute;
 	box-sizing: border-box;
 	background: rgba(25,25,25,1);
-	padding: 1em;
-	border-radius: 5px;
-	border: 10px solid rgba(120,100,150,.5);
-	border: linear-gradient(#030010 50%,#200025 100%);
-	box-shadow: 10px 10px 10px rgba(0,0,0,.5);
+	border-radius: 0.5em;
+	border: 10px solid rgba(120,100,150,0.5);
+	box-shadow: 0 0.5em 1em 1em rgba(0,0,25,0.5);
 	width: 38.25em;
 	font-size: 1rem;
-	.dismiss {
 
+	.element-overlay-toolbar {
+		height: 2em;
+		width: 100%;
+		background-image: url(../../img/carbon_fibre.png);
+		border-bottom: 1px solid #252525;
+  		box-shadow: inset 0 -0.1em 1em rgba(10,0,50,0.5);
+		
+		&:hover {
+			cursor: move;
+			cursor: -webkit-grab;
+			cursor: -moz-grab;
+			cursor: grab;
+		}
+
+		&:active {
+			cursor: default;
+			cursor: -webkit-grabbing;
+			cursor: -moz-grabbing;
+			cursor: grabbing;
+		}
 	}
+
+	.element-overlay-dismiss {
+		color: #ff778f;
+		width: auto;
+		float: right;
+		padding: 0.25em 1em;
+
+		&:hover {
+			color: #fff;
+			cursor: pointer;
+		}
+	}
+
+	.element-overlay-content {
+		padding: 1em;
+	}
+
+	.overlay-header {
+		display: flex;
+		margin-bottom: 1em;
+	}
+
 	h2 {
-		box-sizing: inherit;
+		flex-grow: 2;
 		position: relative;
 		margin: 0;
-		padding: .25em;
-		width: 100%;
+		padding: 0.25em;
 		background: #111;
 		font-variant: small-caps;
 		font-size: 3em;
 		color: #333;
 		text-shadow: -1px -1px 1px #000;
 	}
+
 	.element-quick-detail {
-		box-sizing: inherit;
 		background: #0a0a0a;
-		margin-bottom: 1em;
-		padding: .5em;
-		color: #3ab;
-		& * {
-			display: inline;
-			margin: 0 .5em;
-		}
+		padding: 0.5em;
+		color: #3ae;
+		text-align: right;
 	}
 }
