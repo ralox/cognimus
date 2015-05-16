@@ -3,57 +3,35 @@ $(document).ready(function() {
 	//make each element display a tooltip - the title will have the full element name
 	$('.element-ptable').tooltip();
 
-	//prepare the element overlay to be dragged around
-	$('.element-overlay-toolbar').disableSelection();
-	$('.element-overlay').draggable({handle: '.element-overlay-toolbar'});
+	//make the overlay popup a proper jquery popup, and make it draggable
+	//later, I want to customize the appearance and get my styles back - dammit
+	$('.element-overlay').dialog({
+		autoOpen: false,
+		modal: true,
+		resizable: false,
+		width: 595
+    });
+	/*$('.element-overlay').draggable();*/
 
 	// Assign an onclick function to each of the elements in the periodic table
 	// This function will retrieve and display details about an element
 	// when the user selects one from the periodic table. 
 	$('.element-ptable').click(function() {
-		var datanum = $(this).data('info');
+		var datanum = $(this).data('info');;
 		var overlay = $('.element-overlay');
 
-		clearElementOverlay();
 		overlay.attr('data-info', datanum);
-		populateElementOverlay(datanum);
-		if (overlay.attr('data-moved')==='false') { 
-			centerElementOverlay();
-		};
-		overlay.show();
-	});
-
-	$('.element-overlay-toolbar').click(function() {
-		$('.element-overlay').attr('data-moved', 'true');
-	});
-
-	$('.element-overlay-dismiss').click(function() {
-		$('.element-overlay').fadeOut(300);
-		clearElementOverlay();
-	});
-
-	var clearElementOverlay = function() {
-		$('.element-overlay').attr('data-info', 0);
-		$('.element-overlay-content').html('');
-	}
-
-	var populateElementOverlay = function(atomic_num_data) {
+		overlay.dialog('open'); //.show
+		
 		$.ajax({
 			type: "GET",
-			data: {atomic_num: atomic_num_data},
+			data: {atomic_num: datanum},
 			url: "overlaydata.php",
 			dataType: "html",
 			success: function(response){
-				$('.element-overlay-content').html(response);
+				$('.element-overlay').html(response);
 			}
 		});
-	}
-
-	var centerElementOverlay = function() {
-		$('.element-overlay').position({
-			my: 'center top',
-			at: 'center',
-			of: '#header'
-		});
-	}
+		$('.element-overlay').removeClass('hidden');
+	});
 });

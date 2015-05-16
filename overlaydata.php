@@ -25,12 +25,11 @@
 		echo "Merlin's beard! I failed to pull element details from the database.";
 	}
 
-	$s_retval ="<div class='overlay-header'>".
-		"<h2 class='name-overlay'>".$overlaydata['name']."</h2>".
+	$s_retval ="<h2 class='name-overlay'>".$overlaydata['name']."</h2>".
 		"<div class='element-quick-detail'>".
 		"<div class='atomic_num-overlay'>".$overlaydata['atomic_num']."</div>".
 		"<div class='symbol-overlay'>".$overlaydata['symbol']."</div>".
 		"<div class='atomic_weight-overlay'>".$overlaydata['atomic_weight']."</div>".
-		"</div></div>".
+		"</div>".
 		"<iframe class='video' width='560' height='315' src='https://www.youtube.com/embed/".$overlaydata['video']."?autoplay=0' frameborder='0' allowfullscreen/>";
 	echo $s_retval;

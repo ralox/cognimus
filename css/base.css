@@ -3,11 +3,7 @@
    Base styles for standalone (non-module) tags, text, and backgrounds
    ========================================================================== */
 html {
-  min-height: 100%;
-  box-sizing: border-box; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
+  min-height: 100%; }
 
 body {
   min-height: 100%;

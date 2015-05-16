@@ -24,9 +24,9 @@
 
         <?php include "db_config.php";?>
     </head>
-    <header id="header">
-        <h1 id="title">Cognimus</h1>
-        <p id="tagline">forget the textbook</p>
+    <header id="header" class="">
+        <h1 id="title">Simple Science</h1>
+        <p id="tagline">the Periodic Table</p>
     </header><!-- /header -->
     <body>
         <!--[if lt IE 7]>
@@ -34,19 +34,12 @@
         <![endif]-->
         <div class="content ptable">
             <?php include "constructtable.php";?>
-            <div class="element-overlay" data-moved="false">
-                <div class="element-overlay-toolbar">
-                    <div class="element-overlay-dismiss">
-                        close
-                    </div>
-                </div>
-                <div class="element-overlay-content">
-                    <!-- 
-                    Data for this element is pulled from overlaydata.php 
-                    when the user clicks an element in the table.
-                    function is defined in main.js
-                    -->
-                </div>
+            <div class="element-overlay hidden" title="Element Overview">
+		      <!-- 
+		      Data for this element is pulled from overlaydata.php 
+		      when the user clicks an element in the table.
+              function is defined in main.js
+		      -->
             </div>
         </div>
 
