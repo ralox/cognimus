@@ -20,7 +20,7 @@
 	    <link rel="stylesheet" href="css/external/jquery/jquery-ui.theme.min.css">
 
         <!-- custom styles -->
-        <link rel="stylesheet" href="css/build/master.min.css">
+        <link rel="stylesheet" href="css/local/build/master.min.css">
 
         <?php include "db_config.php";?>
     </head>

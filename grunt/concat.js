@@ -6,7 +6,7 @@ module.exports = {
 	},
 	//combine all css into one "master" file
 	css: {
-		src: ['css/*.css'],
-		dest: 'css/build/master.css'
+		src: ['css/local/*.css'],
+		dest: 'css/local/build/master.css'
 	}
 };

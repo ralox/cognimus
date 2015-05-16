@@ -6,8 +6,8 @@ module.exports = {
 	},
 	target: {
 		files: [{
-			src: ['css/build/master.css'],
-			dest: 'css/build/master.min.css'
+			src: ['css/local/build/master.css'],
+			dest: 'css/local/build/master.min.css'
 		}]
 	}
 };

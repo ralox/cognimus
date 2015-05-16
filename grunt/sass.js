@@ -5,7 +5,7 @@ module.exports =  {
 			expand: true,
 			cwd: 'sass/',
 			src: ['*.scss'],
-			dest: 'css/',
+			dest: 'css/local/',
 			ext: '.css'
 		}]
 	}
